@@ -87,7 +87,7 @@ def write_to_excel(title, main_data, filings_data, other_data=None):
 
         #other_sheet.write(0, index, value)
 
-    workbook.save(r'E:\Development\Projects\NU_Projects\FY15\Company_Data\DEF14As\{0}.xls'.format(title))
+    workbook.save(r'{0}.xls'.format(title))
 
 
 # DEF14A | 10K | Form-4 | 8K | Form D
@@ -97,7 +97,7 @@ def write_to_excel(title, main_data, filings_data, other_data=None):
 # insert stuff into file
 
 def get_CIKs():
-    CIKs = r'E:\Development\Projects\NU_Projects\FY15\Company_Data\cik_ticker.csv'
+    CIKs = r'cik_ticker.csv'
     with open(CIKs, 'rb') as fin:
         rdr = unicodecsv.reader(fin)
         for row in rdr:
